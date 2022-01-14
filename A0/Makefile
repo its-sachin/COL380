@@ -1,15 +1,20 @@
 CC=g++
 #g++ -std=c++11 -O2 -mavx2 -c classify.cpp 
-CFLAGS=-std=c++11 -O2
+CFLAGS=-std=c++11 -O2 -pg
 
 sources=main.cpp classify.cpp
 objects=$(sources:.cpp=.o)
 
-classify:$(objects)
+classify:$(sources)
 	$(CC) $(CFLAGS) -fopenmp $^ -o $@
 
+r = rfile
+d = dfile
+n = 1009072
+t = 4
+x = 3
 run: classify
-	./classify rfile dfile 1009072 4 3
+	./classify $(r) $(d) $(n) $(t) $(x)
 
 #classify.o: classify.h
 #	touch classify.o

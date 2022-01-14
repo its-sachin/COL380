@@ -63,9 +63,14 @@ Data readData(const char *filename, unsigned int nItems)
 int main(int argc, char *argv[])
 {
    assert(argc > 4); // <rangefile> <datafile> <max data to read> <number of threads to use>
+
+   auto begin = std::chrono::high_resolution_clock::now();
    Ranges R = readRanges(argv[1]);
    Data D = readData(argv[2], atoi(argv[3]));
 
+   auto end = std::chrono::high_resolution_clock::now();
+   auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+   std::cout << "Reading time: " <<1e-6 * (std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin)).count() <<std::endl; 
    int reps = 6; // 6 reps by default
    if(argc == 6) // If there is a reps arg, use it
       reps = atoi(argv[5]);

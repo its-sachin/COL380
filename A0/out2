@@ -1,0 +1,4 @@
+g++ -std=c++11 -O2 -g -pg -fopenmp main.cpp classify.cpp -o classify
+./classify rfile dfile 1009072 1 1
+1027.52 ms
+1 iterations of 1009072 items in 1001 ranges with 1 threads: Fastest took 1027.52 ms, Average was 1027.52 ms

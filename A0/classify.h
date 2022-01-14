@@ -92,6 +92,7 @@ public:
          }
          set(_num++, range.lo, range.hi); // Add the new interval at the end
       }
+      return *this;
    }
 
    int range(int val, bool strict = false) const { // Tell the range in which val lies (strict => boundary match not ok)
@@ -112,6 +113,14 @@ public:
          std::cout << r << "," << &_ranges[r] << ": " << _ranges[r].lo << ", " << _ranges[r].hi << "\n"; 
       }
 
+   }
+
+   int lo(int r) const {
+      return _ranges[r].lo;
+   }
+
+   int hi(int r) const {
+      return _ranges[r].hi;
    }
 
    int num() const { return _num; }
