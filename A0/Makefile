@@ -13,8 +13,9 @@ d = dfile
 n = 1009072
 t = 4
 x = 3
+type = 1
 run: classify
-	./classify $(r) $(d) $(n) $(t) $(x)
+	./classify $(r) $(d) $(n) $(t) $(x) $(type)
 
 #classify.o: classify.h
 #	touch classify.o

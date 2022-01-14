@@ -3,12 +3,15 @@
 #include <fstream>
 #include <chrono>
 #include "classify.h"
-
+int type;
 float timedwork(Data &D, const Ranges &R, unsigned int numt)
 {
    // starttimer();
    auto begin = std::chrono::high_resolution_clock::now();
-   Data D2 = classify(D, R, numt);
+
+   if(type==0)Data D2 = classifyOld(D, R, numt);
+   else Data D2 = classify(D, R, numt);
+
    auto end = std::chrono::high_resolution_clock::now();
    auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
    // return(1e-6 * elapsed.count());
@@ -72,9 +75,9 @@ int main(int argc, char *argv[])
    auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
    std::cout << "Reading time: " <<1e-6 * (std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin)).count() <<std::endl; 
    int reps = 6; // 6 reps by default
-   if(argc == 6) // If there is a reps arg, use it
+   if(argc == 7) // If there is a reps arg, use it
       reps = atoi(argv[5]);
-
+   type = atoi(argv[6]);
    repeatrun(reps, D, R, atoi(argv[4])); // repeat reps times
    return 0;
 }

@@ -1,25 +1,23 @@
-file = open('outt','r+')
-got=False; tid=0; values=[]
-for line in file.readlines():
-    l = line.split(' ')
-    if(l[0] == 'thread'):
-        values.append([])
-        got = True
-        continue
-    try:
-        values[-1].append([int(l[0]), int(l[-1])])
-    except:continue
+import subprocess
+from matplotlib import pyplot as plt
 
-minn = 1e10
-for i in values:minn=min(minn,len(i))
+T = 7
+X = 10
+colour = ['c','g']
+for i in range(2):
+    val = []
+    for t in range(1,T):
+        print(f'make run x={X} t={t} type={i} > outt')
+        subprocess.run(f'make run x={X} t={t} type={i} > outt',shell=True)
+        file = open('outt','r+')
+        line = []
+        for l in file.readlines():line=l.split(' ')
+        val.append(float(line[-2]))
+    plt.xlabel('Number of Threads')
+    plt.ylabel('Time(ms)')
+    print(val)
+    plt.plot([i for i in range(1,T)],val,colour[i], linewidth = 2, marker = 'o', label = f"Type = {i}")
 
-numt = len(values)
-i = 0; last = -1
-for i in range(minn):
-    for j in values:
-        if(last+1!=j[i][0]):print(last,j)
-        last = j[i][1]
-
-for i in range(minn):
-    for j in values:print(j[i],end=', ')
-    print()
+plt.legend(loc = 'upper left')
+plt.savefig('type-analysis.png')
+plt.show()
