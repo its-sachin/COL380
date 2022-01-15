@@ -1,6 +1,5 @@
 #include "classify.h"
 #include <omp.h>
-#include <bits/stdc++.h>
 
 Data classifyOld(Data &D, const Ranges &R, unsigned int numt)
 { // Classify each item in D into intervals (given by R). Finally, produce in D2 data sorted by interval
@@ -97,7 +96,6 @@ Data classify(Data &D, const Ranges &R, unsigned int numt)
          int r = D.data[i].value;
          int k = 0;
          if(tid > 0) k = counts[r].get(tid-1) ;
-         if(rangecount[r-1] + k + c[r].get(tid) > D.ndata)
          D2.data[rangecount[r-1] + k + c[r].get(tid)] = D.data[i];
          c[r].increase(tid);
       }
