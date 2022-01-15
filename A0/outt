@@ -1,13 +1,1 @@
-./classify rfile dfile 1009072 6 10 1
-Reading time: 62.0298
-242.042 ms
-170.735 ms
-166.463 ms
-167.815 ms
-164.612 ms
-164.194 ms
-164.093 ms
-165.247 ms
-181.536 ms
-163.299 ms
-10 iterations of 1009072 items in 1001 ranges with 6 threads: Fastest took 163.299 ms, Average was 175.004 ms
+./classify rfile dfile 1009072 2 10 0

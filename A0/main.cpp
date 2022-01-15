@@ -73,7 +73,6 @@ int main(int argc, char *argv[])
 
    auto end = std::chrono::high_resolution_clock::now();
    auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
-   std::cout << "Reading time: " <<1e-6 * (std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin)).count() <<std::endl; 
    int reps = 6; // 6 reps by default
    if(argc == 7) // If there is a reps arg, use it
       reps = atoi(argv[5]);

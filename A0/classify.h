@@ -33,6 +33,11 @@ public:
       _counts[id]++;
    }
 
+   void increaseVal(unsigned int id, int val) {
+      assert(id < _numcount);
+      _counts[id]+= val;
+   }
+
    void xincrease(unsigned int id) { // Safe increment
       assert(id < _numcount);
       const std::lock_guard<std::mutex> lock(cmutex);
@@ -47,7 +52,6 @@ public:
    void inspect() {
       std::cout << "Subcounts -- ";
       for(int i=0; i<_numcount; i++)
-	 std::cout << i << ":" << _counts[i] << " ";
       std::cout << "\n";
    }
 
