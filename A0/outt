@@ -1,25 +1,44 @@
-==86617== Cachegrind, a cache and branch-prediction profiler
-==86617== Copyright (C) 2002-2017, and GNU GPL'd, by Nicholas Nethercote et al.
-==86617== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==86617== Command: make run x=10 t=6 type=1
-==86617== Parent PID: 86616
-==86617== 
---86617-- warning: L3 cache found, using its data for the LL simulation.
---86617-- warning: specified LL cache: line_size 64  assoc 16  total_size 12,582,912
---86617-- warning: simulated LL cache: line_size 64  assoc 24  total_size 12,582,912
-==86617== 
-==86617== I   refs:      2,552,410
-==86617== I1  misses:        3,598
-==86617== LLi misses:        2,704
-==86617== I1  miss rate:      0.14%
-==86617== LLi miss rate:      0.11%
-==86617== 
-==86617== D   refs:        924,126  (588,940 rd   + 335,186 wr)
-==86617== D1  misses:       12,927  (  8,824 rd   +   4,103 wr)
-==86617== LLd misses:        6,671  (  2,926 rd   +   3,745 wr)
-==86617== D1  miss rate:       1.4% (    1.5%     +     1.2%  )
-==86617== LLd miss rate:       0.7% (    0.5%     +     1.1%  )
-==86617== 
-==86617== LL refs:          16,525  ( 12,422 rd   +   4,103 wr)
-==86617== LL misses:         9,375  (  5,630 rd   +   3,745 wr)
-==86617== LL miss rate:        0.3% (    0.2%     +     1.1%  )
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 99.95      4.10     4.10                             readRanges(char const*)
+  0.24      4.11     0.01                             repeatrun(unsigned int, Data&, Ranges const&, unsigned int)
+  0.00      4.11     0.00       10     0.00     0.00  classify(Data&, Ranges const&, unsigned int)
+  0.00      4.11     0.00       10     0.00     0.00  timedwork(Data&, Ranges const&, unsigned int)
+  0.00      4.11     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11classifyOldR4DataRK6Rangesj
+  0.00      4.11     0.00        1     0.00     0.00  _GLOBAL__sub_I_type
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.

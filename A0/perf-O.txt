@@ -1,0 +1,198 @@
+# started on Sun Jan 16 15:55:16 2022
+
+
+ Performance counter stats for 'make test x=10 t=1 type=0':
+
+         14,289.31 msec task-clock                #    0.999 CPUs utilized          
+               141      context-switches          #    0.010 K/sec                  
+                 5      cpu-migrations            #    0.000 K/sec                  
+            23,643      page-faults               #    0.002 M/sec                  
+    62,051,881,922      cycles                    #    4.343 GHz                      (30.68%)
+   111,860,325,310      instructions              #    1.80  insn per cycle           (38.49%)
+    40,486,730,620      branches                  # 2833.358 M/sec                    (38.50%)
+        17,789,721      branch-misses             #    0.04% of all branches          (38.52%)
+    20,578,169,197      L1-dcache-loads           # 1440.109 M/sec                    (38.55%)
+     1,270,304,376      L1-dcache-load-misses     #    6.17% of all L1-dcache accesses  (38.53%)
+        27,159,932      LLC-loads                 #    1.901 M/sec                    (30.84%)
+           703,071      LLC-load-misses           #    2.59% of all LL-cache accesses  (30.84%)
+   <not supported>      L1-icache-loads                                             
+         2,732,231      L1-icache-load-misses                                         (30.84%)
+    20,511,244,110      dTLB-loads                # 1435.426 M/sec                    (30.83%)
+        19,882,972      dTLB-load-misses          #    0.10% of all dTLB cache accesses  (30.76%)
+            31,485      iTLB-loads                #    0.002 M/sec                    (30.73%)
+            69,834      iTLB-load-misses          #  221.80% of all iTLB cache accesses  (30.67%)
+   <not supported>      L1-dcache-prefetches                                        
+   <not supported>      L1-dcache-prefetch-misses                                   
+
+      14.303620878 seconds time elapsed
+
+      14.270688000 seconds user
+       0.020011000 seconds sys
+
+
+
+# started on Sun Jan 16 15:55:30 2022
+
+
+ Performance counter stats for 'make test x=10 t=2 type=0':
+
+         14,700.59 msec task-clock                #    1.988 CPUs utilized          
+               231      context-switches          #    0.016 K/sec                  
+                14      cpu-migrations            #    0.001 K/sec                  
+            23,642      page-faults               #    0.002 M/sec                  
+    62,531,364,504      cycles                    #    4.254 GHz                      (30.79%)
+   111,580,092,698      instructions              #    1.78  insn per cycle           (38.48%)
+    40,293,927,344      branches                  # 2740.973 M/sec                    (38.42%)
+        16,814,087      branch-misses             #    0.04% of all branches          (38.38%)
+    20,505,861,628      L1-dcache-loads           # 1394.901 M/sec                    (38.42%)
+     1,273,907,805      L1-dcache-load-misses     #    6.21% of all L1-dcache accesses  (38.49%)
+        28,163,166      LLC-loads                 #    1.916 M/sec                    (30.80%)
+           823,721      LLC-load-misses           #    2.92% of all LL-cache accesses  (30.87%)
+   <not supported>      L1-icache-loads                                             
+         3,205,904      L1-icache-load-misses                                         (30.85%)
+    20,642,827,478      dTLB-loads                # 1404.218 M/sec                    (30.83%)
+        19,946,065      dTLB-load-misses          #    0.10% of all dTLB cache accesses  (30.86%)
+            37,896      iTLB-loads                #    0.003 M/sec                    (30.85%)
+            77,563      iTLB-load-misses          #  204.67% of all iTLB cache accesses  (30.81%)
+   <not supported>      L1-dcache-prefetches                                        
+   <not supported>      L1-dcache-prefetch-misses                                   
+
+       7.396312570 seconds time elapsed
+
+      14.681709000 seconds user
+       0.019988000 seconds sys
+
+
+
+# started on Sun Jan 16 15:55:38 2022
+
+
+ Performance counter stats for 'make test x=10 t=3 type=0':
+
+         15,212.28 msec task-clock                #    2.964 CPUs utilized          
+               281      context-switches          #    0.018 K/sec                  
+                 6      cpu-migrations            #    0.000 K/sec                  
+            23,646      page-faults               #    0.002 M/sec                  
+    62,768,671,066      cycles                    #    4.126 GHz                      (30.78%)
+   112,048,977,545      instructions              #    1.79  insn per cycle           (38.45%)
+    40,676,431,748      branches                  # 2673.921 M/sec                    (38.45%)
+        16,120,004      branch-misses             #    0.04% of all branches          (38.47%)
+    20,585,495,233      L1-dcache-loads           # 1353.216 M/sec                    (38.54%)
+     1,275,105,356      L1-dcache-load-misses     #    6.19% of all L1-dcache accesses  (38.56%)
+        31,108,584      LLC-loads                 #    2.045 M/sec                    (30.90%)
+           815,080      LLC-load-misses           #    2.62% of all LL-cache accesses  (30.97%)
+   <not supported>      L1-icache-loads                                             
+         3,502,515      L1-icache-load-misses                                         (30.97%)
+    20,504,953,330      dTLB-loads                # 1347.921 M/sec                    (30.88%)
+        19,961,899      dTLB-load-misses          #    0.10% of all dTLB cache accesses  (30.80%)
+            43,455      iTLB-loads                #    0.003 M/sec                    (30.67%)
+            79,820      iTLB-load-misses          #  183.68% of all iTLB cache accesses  (30.64%)
+   <not supported>      L1-dcache-prefetches                                        
+   <not supported>      L1-dcache-prefetch-misses                                   
+
+       5.133063148 seconds time elapsed
+
+      15.161300000 seconds user
+       0.052026000 seconds sys
+
+
+
+# started on Sun Jan 16 15:55:43 2022
+
+
+ Performance counter stats for 'make test x=10 t=4 type=0':
+
+         15,623.29 msec task-clock                #    3.938 CPUs utilized          
+               139      context-switches          #    0.009 K/sec                  
+                 9      cpu-migrations            #    0.001 K/sec                  
+            23,651      page-faults               #    0.002 M/sec                  
+    63,668,537,388      cycles                    #    4.075 GHz                      (30.88%)
+   112,127,655,207      instructions              #    1.76  insn per cycle           (38.59%)
+    40,443,984,203      branches                  # 2588.698 M/sec                    (38.54%)
+        15,212,613      branch-misses             #    0.04% of all branches          (38.48%)
+    20,566,716,542      L1-dcache-loads           # 1316.414 M/sec                    (38.41%)
+     1,281,674,205      L1-dcache-load-misses     #    6.23% of all L1-dcache accesses  (38.38%)
+        30,152,411      LLC-loads                 #    1.930 M/sec                    (30.68%)
+           748,982      LLC-load-misses           #    2.48% of all LL-cache accesses  (30.90%)
+   <not supported>      L1-icache-loads                                             
+         3,235,739      L1-icache-load-misses                                         (31.01%)
+    20,466,609,444      dTLB-loads                # 1310.006 M/sec                    (30.98%)
+        19,858,063      dTLB-load-misses          #    0.10% of all dTLB cache accesses  (30.95%)
+            40,593      iTLB-loads                #    0.003 M/sec                    (30.92%)
+            74,053      iTLB-load-misses          #  182.43% of all iTLB cache accesses  (30.89%)
+   <not supported>      L1-dcache-prefetches                                        
+   <not supported>      L1-dcache-prefetch-misses                                   
+
+       3.967182252 seconds time elapsed
+
+      15.604252000 seconds user
+       0.020013000 seconds sys
+
+
+
+# started on Sun Jan 16 15:55:47 2022
+
+
+ Performance counter stats for 'make test x=10 t=5 type=0':
+
+         15,969.59 msec task-clock                #    4.906 CPUs utilized          
+               135      context-switches          #    0.008 K/sec                  
+                13      cpu-migrations            #    0.001 K/sec                  
+            23,650      page-faults               #    0.001 M/sec                  
+    63,814,486,169      cycles                    #    3.996 GHz                      (30.88%)
+   112,556,761,505      instructions              #    1.76  insn per cycle           (38.58%)
+    40,936,431,927      branches                  # 2563.399 M/sec                    (38.56%)
+        14,211,740      branch-misses             #    0.03% of all branches          (38.56%)
+    20,871,208,488      L1-dcache-loads           # 1306.935 M/sec                    (38.57%)
+     1,293,208,082      L1-dcache-load-misses     #    6.20% of all L1-dcache accesses  (38.62%)
+        30,583,592      LLC-loads                 #    1.915 M/sec                    (30.98%)
+           571,249      LLC-load-misses           #    1.87% of all LL-cache accesses  (30.95%)
+   <not supported>      L1-icache-loads                                             
+         3,463,447      L1-icache-load-misses                                         (30.89%)
+    20,291,594,280      dTLB-loads                # 1270.640 M/sec                    (30.78%)
+        19,663,425      dTLB-load-misses          #    0.10% of all dTLB cache accesses  (30.74%)
+            45,338      iTLB-loads                #    0.003 M/sec                    (30.70%)
+            84,204      iTLB-load-misses          #  185.72% of all iTLB cache accesses  (30.92%)
+   <not supported>      L1-dcache-prefetches                                        
+   <not supported>      L1-dcache-prefetch-misses                                   
+
+       3.254967272 seconds time elapsed
+
+      15.954599000 seconds user
+       0.016000000 seconds sys
+
+
+
+# started on Sun Jan 16 15:55:50 2022
+
+
+ Performance counter stats for 'make test x=10 t=6 type=0':
+
+         16,234.30 msec task-clock                #    5.845 CPUs utilized          
+               173      context-switches          #    0.011 K/sec                  
+                11      cpu-migrations            #    0.001 K/sec                  
+            23,655      page-faults               #    0.001 M/sec                  
+    64,394,560,775      cycles                    #    3.967 GHz                      (30.97%)
+   112,035,531,672      instructions              #    1.74  insn per cycle           (38.68%)
+    40,680,876,302      branches                  # 2505.859 M/sec                    (38.65%)
+        15,679,942      branch-misses             #    0.04% of all branches          (38.61%)
+    20,710,097,747      L1-dcache-loads           # 1275.700 M/sec                    (38.50%)
+     1,281,017,525      L1-dcache-load-misses     #    6.19% of all L1-dcache accesses  (38.38%)
+        30,031,903      LLC-loads                 #    1.850 M/sec                    (30.59%)
+           467,123      LLC-load-misses           #    1.56% of all LL-cache accesses  (30.57%)
+   <not supported>      L1-icache-loads                                             
+         3,888,174      L1-icache-load-misses                                         (30.74%)
+    20,206,888,979      dTLB-loads                # 1244.703 M/sec                    (31.11%)
+        19,769,548      dTLB-load-misses          #    0.10% of all dTLB cache accesses  (31.09%)
+            28,032      iTLB-loads                #    0.002 M/sec                    (31.05%)
+            61,945      iTLB-load-misses          #  220.98% of all iTLB cache accesses  (31.01%)
+   <not supported>      L1-dcache-prefetches                                        
+   <not supported>      L1-dcache-prefetch-misses                                   
+
+       2.777323631 seconds time elapsed
+
+      16.219836000 seconds user
+       0.015986000 seconds sys
+
+
+
