@@ -4,20 +4,31 @@
 #include <chrono>
 #include <omp.h>
 #include "psort.h"
+#include <bits/stdc++.h>
 
 
-void check_sorted(uint32_t *data, int n)
+void check_sorted(uint32_t *data, uint32_t* dataCopy, int n)
 {
-    for (int i = 0; i < n - 1; i++)
+    // for (int i = 0; i < n - 1; i++)
+    // {
+    //     if (data[i] > data[i + 1])
+    //     {
+    //         std::cout << "\nData is not sorted.\n";
+    //         return;
+    //     }
+    // }
+    
+    std::sort(dataCopy, dataCopy + n);
+    for (int i = 0; i < n; i++)
     {
-        if (data[i] > data[i + 1])
+        if (data[i] != dataCopy[i])
         {
-            std::cout << "Data is not sorted.\n";
+            std::cout << "\nData is not sorted.\n";
             return;
         }
     }
 
-    std::cout << "Data is sorted.\n";
+    std::cout << "\nData is sorted.\n";
     return;
 }
 
@@ -47,13 +58,16 @@ int main(int argc, char *argv[])
     int p, n_threads = atoi(argv[2]);
     fs >> n >> p;
     uint32_t *data = new uint32_t[n];
+    uint32_t *dataCopy = new uint32_t[n];
 
     std::cout << "n_threads = " << n_threads << std::endl;
-    std::cout << "N = " << n << " p = " << p << std::endl;
+    std::cout << "N = " << n << " p = " << p << '\n'<< std::endl;
 
-    while (fs >> data[d++])
+    while (fs >> data[d++]){
+        dataCopy[d-1] = data[d-1];
         if(d == n)
             break;
+    }
 
     fs.close();
 
@@ -64,12 +78,13 @@ int main(int argc, char *argv[])
     auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
     double duration = (1e-6 * (std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin)).count());
 
-    check_sorted(data, n);
+    check_sorted(data, dataCopy, n);
     std::cout << "Time taken for sorting " << n << " elements with "
         << p << " buckets = " << duration << "ms" << std::endl;
 
     // Clean-up
     delete data;
+    delete dataCopy;
 
     return 0;
 }

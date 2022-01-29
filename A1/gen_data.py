@@ -18,6 +18,8 @@ def generate_test_set(nsize, p):
 
 
 if __name__ == '__main__':
-    nsize = int(sys.argv[1])
+    nsize = sys.argv[1]
+    if(nsize == 'max'):nsize = 2**25
+    else:nsize = int(nsize)
     p = int(sys.argv[2])
     generate_test_set(nsize, p)

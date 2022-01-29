@@ -1,0 +1,27 @@
+./a.out input_33554432.txt 7 
+n_threads = 7
+N = 33554432 p = 10
+
+Parallel Sort 33554432
+Parallel Sort 100
+Seq Sort 100
+Got Size 1876140 Threshold 6710886
+Seq Sort 1876140
+Got Size 4447996 Threshold 6710886
+Seq Sort 4447996
+Got Size 3895538 Threshold 6710886
+Seq Sort 3895538
+Got Size 2269361 Threshold 6710886
+Seq Sort 2269361
+Got Size 3366789 Threshold 6710886
+Seq Sort 3366789
+Got Size 3639292 Threshold 6710886
+Seq Sort 3639292
+Got Size 2549842 Threshold 6710886
+Seq Sort 2549842
+Got Size 2223652 Threshold 6710886
+Seq Sort 2223652
+Got Size 2572397 Threshold 6710886
+Seq Sort 2572397
+Got Size 6713425 Threshold 6710886
+Seq Sort 6713425
