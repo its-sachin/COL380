@@ -1,0 +1,96 @@
+./a.out input_33554432.bin 1 
+n_threads = 1
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 15380.1ms
+./a.out input_33554432.bin 2 
+n_threads = 2
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 8007.89ms
+./a.out input_33554432.bin 3 
+n_threads = 3
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 5341.28ms
+./a.out input_33554432.bin 4 
+n_threads = 4
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 4056.34ms
+./a.out input_33554432.bin 5 
+n_threads = 5
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3243.36ms
+./a.out input_33554432.bin 6 
+n_threads = 6
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3312.47ms
+./a.out input_33554432.bin 7 
+n_threads = 7
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3254.05ms
+./a.out input_33554432.bin 8 
+n_threads = 8
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3256.04ms
+./a.out input_33554432.bin 9 
+n_threads = 9
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3388.21ms
+./a.out input_33554432.bin 10 
+n_threads = 10
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3339.35ms
+./a.out input_33554432.bin 11 
+n_threads = 11
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3397.56ms
+./a.out input_33554432.bin 12 
+n_threads = 12
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3409.53ms
+./a.out input_33554432.bin 13 
+n_threads = 13
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3245.86ms
+./a.out input_33554432.bin 14 
+n_threads = 14
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3390.58ms
+./a.out input_33554432.bin 15 
+n_threads = 15
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3247.78ms
+./a.out input_33554432.bin 16 
+n_threads = 16
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3334.64ms
+./a.out input_33554432.bin 17 
+n_threads = 17
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3423.44ms
+./a.out input_33554432.bin 18 
+n_threads = 18
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3262.54ms
+./a.out input_33554432.bin 19 
+n_threads = 19
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3338.52ms
+./a.out input_33554432.bin 20 
+n_threads = 20
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3315.12ms
+./a.out input_33554432.bin 21 
+n_threads = 21
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3300.54ms
+./a.out input_33554432.bin 22 
+n_threads = 22
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3213.83ms
+./a.out input_33554432.bin 23 
+n_threads = 23
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3299.95ms
+./a.out input_33554432.bin 24 
+n_threads = 24
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 3276.58ms

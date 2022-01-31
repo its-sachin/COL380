@@ -1,0 +1,20 @@
+./a.out input_4294967295.bin 1 
+n_threads = 1
+N = 4294967295 p = 40
+Time taken for sorting 4294967295 elements with 40 buckets = 2.78313e+06ms
+./a.out input_4294967295.bin 2 
+n_threads = 2
+N = 4294967295 p = 40
+Time taken for sorting 4294967295 elements with 40 buckets = 1.44567e+06ms
+./a.out input_4294967295.bin 3 
+n_threads = 3
+N = 4294967295 p = 40
+Time taken for sorting 4294967295 elements with 40 buckets = 1.00617e+06ms
+./a.out input_4294967295.bin 4 
+n_threads = 4
+N = 4294967295 p = 40
+Time taken for sorting 4294967295 elements with 40 buckets = 774794ms
+./a.out input_4294967295.bin 5 
+n_threads = 5
+N = 4294967295 p = 40
+Time taken for sorting 4294967295 elements with 40 buckets = 597219ms

@@ -1,6 +1,5 @@
 #include "psort.h"
 #include <omp.h>
-#include <iostream>
 
 
 void swap(uint32_t* a, uint32_t* b){
@@ -48,45 +47,7 @@ void quickSort(uint32_t* a, uint32_t left, uint32_t right){
 }
 
 
-void heapify(uint32_t* heap, uint32_t i, uint32_t heapSize){
-    uint32_t l = 2*i+1;
-    uint32_t r = 2*i+2;
-    
-    uint32_t largest = i;
-    if (l<heapSize && heap[l]>heap[i]){
-        largest = l;
-    }
-    if (r<heapSize && heap[r] > heap[largest]){
-        largest = r;
-    }
-
-    if (largest != i){
-        swap(&heap[largest],&heap[i]);
-        heapify(heap,largest,heapSize);
-    }
-}
-
-void heapSort(uint32_t* heap, uint32_t n){
-    uint32_t heapSize = n;
-
-    uint32_t i = n/2;
-    do {
-        i--;
-        heapify(heap,i,heapSize);
-    }
-    while (i != 0);
-
-    for (uint32_t i=n-1;i>0;i--){
-        swap(&heap[0],&heap[i]);
-        heapSize = heapSize-1;
-        heapify(heap,0,heapSize);
-    }
-}
-
-
 void SequentialSort(uint32_t *data, uint32_t n){
-    std::cout<<"Seq Sort "<<n <<std::endl;
-    // heapSort(data, n);
     quickSort(data, 0, n-1);
 }
 
@@ -94,24 +55,26 @@ void sortR(uint32_t *data, uint32_t n, int p){
     ParallelSort(data, n, p);
 }
 
+int min(int a, int b){
+  return a < b ? a : b;
+}
+
 void ParallelSort(uint32_t *data, uint32_t n, int p)
 {
     // Entry point to your sorting implementation.
     // Sorted array should be present at location pointed to by data.
-
-    std::cout<<"Parallel Sort "<<n <<std::endl;
     if(p*p >= n) {
         SequentialSort(data, n);
         return;
     }
 
     uint32_t INF = 4294967295;
-    uint32_t threshold = 2*n/p;
+    uint32_t threshold = 2*(n/p);
 
     uint32_t* R = new uint32_t[p*p];
     int mod = n%p;
     for(int i=0; i<p; i++){
-        int k = std::min(i, mod);
+        int k = min(i, mod);
         for(int j=0; j<p; j++){
             R[i*p + j] = data[i*(n/p)+ j + k];        
         }
@@ -135,9 +98,18 @@ void ParallelSort(uint32_t *data, uint32_t n, int p)
         #pragma omp task firstprivate(i), shared(B,Bsize)
         {
             uint32_t size = 0;
-            for(uint32_t j=0; j<n; j++){
-                if(S[i] < data[j] && data[j] <= S[i+1]){
-                    B[i][size++] = data[j];
+            if(i > 0) {
+                for(uint32_t j=0; j<n; j++){
+                    if(S[i] < data[j] && data[j] <= S[i+1]){
+                        B[i][size++] = data[j];
+                    }
+                }
+            }
+            else{
+                for(uint32_t j=0; j<n; j++){
+                    if(data[j] <= S[i+1]){
+                        B[i][size++] = data[j];
+                    }
                 }
             }
             if(Bsize[i] < threshold) SequentialSort(B[i], size);

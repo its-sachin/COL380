@@ -4,31 +4,20 @@
 #include <chrono>
 #include <omp.h>
 #include "psort.h"
-#include <bits/stdc++.h>
 
 
-void check_sorted(uint32_t *data, uint32_t* dataCopy, int n)
+void check_sorted(uint32_t *data, uint32_t n)
 {
-    // for (int i = 0; i < n - 1; i++)
-    // {
-    //     if (data[i] > data[i + 1])
-    //     {
-    //         std::cout << "\nData is not sorted.\n";
-    //         return;
-    //     }
-    // }
-    
-    std::sort(dataCopy, dataCopy + n);
-    for (int i = 0; i < n; i++)
+    for (uint32_t i = 0; i < n - 1; i++)
     {
-        if (data[i] != dataCopy[i])
+        if (data[i] > data[i + 1])
         {
-            std::cout << "\nData is not sorted.\n";
+            std::cout << "Data is not sorted.\n";
             return;
         }
     }
 
-    std::cout << "\nData is sorted.\n";
+    std::cout << "Data is sorted.\n";
     return;
 }
 
@@ -51,22 +40,22 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    std::fstream fs(argv[1], std::fstream::in);
+    std::fstream fs(argv[1], std::ios::in | std::ios::binary);
 
     // Reading data
     uint32_t n, d = 0;
     int p, n_threads = atoi(argv[2]);
-    fs >> n >> p;
+
+    fs.read((char *)&n, sizeof(n));
+    fs.read((char *)&p, sizeof(p));
+
     uint32_t *data = new uint32_t[n];
-    uint32_t *dataCopy = new uint32_t[n];
 
     std::cout << "n_threads = " << n_threads << std::endl;
-    std::cout << "N = " << n << " p = " << p << '\n'<< std::endl;
+    std::cout << "N = " << n << " p = " << p << std::endl;
 
-    while (fs >> data[d++]){
-        dataCopy[d-1] = data[d-1];
-        if(d == n)
-            break;
+    for (d = 0; d < n; d++) {
+        fs.read((char *)&data[d], sizeof(uint32_t));
     }
 
     fs.close();
@@ -78,13 +67,12 @@ int main(int argc, char *argv[])
     auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
     double duration = (1e-6 * (std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin)).count());
 
-    check_sorted(data, dataCopy, n);
+    check_sorted(data, n);
     std::cout << "Time taken for sorting " << n << " elements with "
         << p << " buckets = " << duration << "ms" << std::endl;
 
     // Clean-up
     delete data;
-    delete dataCopy;
 
     return 0;
 }

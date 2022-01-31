@@ -1,0 +1,3 @@
+n_threads = 24
+N = 33554432 p = 24
+Time taken for sorting 33554432 elements with 24 buckets = 2359ms

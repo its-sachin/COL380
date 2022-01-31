@@ -1,0 +1,3 @@
+n_threads = 8
+N = 4294967295 p = 40
+Time taken for sorting 4294967295 elements with 40 buckets = 565341ms
