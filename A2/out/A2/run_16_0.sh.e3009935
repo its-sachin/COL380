@@ -1,0 +1,299 @@
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+mbind: Invalid argument
+[csky052:32453:0:32453] Caught signal 11 (Segmentation fault: Sent by the kernel at address (nil))
+[csky072:32583:0:32583] Caught signal 11 (Segmentation fault: Sent by the kernel at address (nil))
+[csky079:13342:0:13342] Caught signal 11 (Segmentation fault: Sent by the kernel at address (nil))
+[csky052:32452:0:32452] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x7ffeb2c72070)
+==== backtrace (tid:  32452) ====
+ 0 0x000000000004cb15 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000041041e std::vector<int, std::allocator<int> >::push_back()  ???:0
+ 2 0x000000000040a6c4 main()  ???:0
+ 3 0x0000000000022495 __libc_start_main()  ???:0
+ 4 0x0000000000409f29 _start()  ???:0
+=================================
+[csky052:32452:0] Caught signal 11 (Segmentation fault)
+==== backtrace (tid:  32453) ====
+ 0 0x000000000004cb15 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000041041e std::vector<int, std::allocator<int> >::push_back()  ???:0
+ 2 0x000000000040a6c4 main()  ???:0
+ 3 0x0000000000022495 __libc_start_main()  ???:0
+ 4 0x0000000000409f29 _start()  ???:0
+=================================
+[csky052:32453:0] Caught signal 11 (Segmentation fault)
+==== backtrace (tid:  32583) ====
+ 0 0x000000000004cb15 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000041041e std::vector<int, std::allocator<int> >::push_back()  ???:0
+ 2 0x000000000040a6c4 main()  ???:0
+ 3 0x0000000000022495 __libc_start_main()  ???:0
+ 4 0x0000000000409f29 _start()  ???:0
+=================================
+[csky072:32583:0] Caught signal 11 (Segmentation fault)
+==== backtrace (tid:  13342) ====
+ 0 0x000000000004cb15 ucs_debug_print_backtrace()  ???:0
+ 1 0x000000000041041e std::vector<int, std::allocator<int> >::push_back()  ???:0
+ 2 0x000000000040a6c4 main()  ???:0
+ 3 0x0000000000022495 __libc_start_main()  ???:0
+ 4 0x0000000000409f29 _start()  ???:0
+=================================
+[csky079:13342:0] Caught signal 11 (Segmentation fault)
+==== backtrace ====
+==== backtrace ====
+ 2 0x000000000006bafc mxm_handle_error()  /var/tmp/OFED_topdir/BUILD/mxm-3.7.3112/src/mxm/util/debug/debug.c:641
+ 3 0x000000000006c04c mxm_error_signal_handler()  /var/tmp/OFED_topdir/BUILD/mxm-3.7.3112/src/mxm/util/debug/debug.c:616
+ 4 0x000000000000f5d0 _L_unlock_13()  funlockfile.c:0
+ 5 0x000000000041041e _ZNSt6vectorIiSaIiEE9push_backERKi()  ??:0
+ 6 0x000000000040a6c4 main()  ??:0
+ 7 0x0000000000022495 __libc_start_main()  ??:0
+ 8 0x0000000000409f29 _start()  ??:0
+===================
+ 2 0x000000000006bafc mxm_handle_error()  /var/tmp/OFED_topdir/BUILD/mxm-3.7.3112/src/mxm/util/debug/debug.c:641
+ 3 0x000000000006c04c mxm_error_signal_handler()  /var/tmp/OFED_topdir/BUILD/mxm-3.7.3112/src/mxm/util/debug/debug.c:616
+ 4 0x000000000000f5d0 _L_unlock_13()  funlockfile.c:0
+ 5 0x000000000041041e _ZNSt6vectorIiSaIiEE9push_backERKi()  ??:0
+ 6 0x000000000040a6c4 main()  ??:0
+ 7 0x0000000000022495 __libc_start_main()  ??:0
+ 8 0x0000000000409f29 _start()  ??:0
+===================
+==== backtrace ====
+ 2 0x000000000006bafc mxm_handle_error()  /var/tmp/OFED_topdir/BUILD/mxm-3.7.3112/src/mxm/util/debug/debug.c:641
+ 3 0x000000000006c04c mxm_error_signal_handler()  /var/tmp/OFED_topdir/BUILD/mxm-3.7.3112/src/mxm/util/debug/debug.c:616
+ 4 0x000000000000f5d0 _L_unlock_13()  funlockfile.c:0
+ 5 0x000000000041041e _ZNSt6vectorIiSaIiEE9push_backERKi()  ??:0
+ 6 0x000000000040a6c4 main()  ??:0
+ 7 0x0000000000022495 __libc_start_main()  ??:0
+ 8 0x0000000000409f29 _start()  ??:0
+===================
+==== backtrace ====
+ 2 0x000000000006bafc mxm_handle_error()  /var/tmp/OFED_topdir/BUILD/mxm-3.7.3112/src/mxm/util/debug/debug.c:641
+ 3 0x000000000006c04c mxm_error_signal_handler()  /var/tmp/OFED_topdir/BUILD/mxm-3.7.3112/src/mxm/util/debug/debug.c:616
+ 4 0x000000000000f5d0 _L_unlock_13()  funlockfile.c:0
+ 5 0x000000000041041e _ZNSt6vectorIiSaIiEE9push_backERKi()  ??:0
+ 6 0x000000000040a6c4 main()  ??:0
+ 7 0x0000000000022495 __libc_start_main()  ??:0
+ 8 0x0000000000409f29 _start()  ??:0
+===================
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+orterun noticed that process rank 11 with PID 32452 on node csky052 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+
+real	0m8.632s
+user	0m5.301s
+sys	0m0.842s
